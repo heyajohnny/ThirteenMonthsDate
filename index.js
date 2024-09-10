@@ -2,7 +2,7 @@ class ThirteenMonthsDate {
 	constructor(...args) {
 	  this.monthNames = [
 		"January", "February", "March", "April", "May", "June", "July",
-		"August", "September", "October", "November", "December", "Tridecember", "Intercalary"
+		"August", "September", "October", "November", "December", "Undecember", "Intercalary"
 	  ];
   
 	  if (args.length === 0) {

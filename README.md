@@ -130,13 +130,13 @@ console.log('Local Month:', date.getMonth(), date.getMonthName());
 // Output: Local Month: 13 Intercalary
 
 console.log('UTC Month:', date.getUTCMonth(), date.monthNames[date.getUTCMonth()]);
-// Output: UTC Month: 12 Tridecember
+// Output: UTC Month: 12 Undecember
 
 console.log('ToString:', date.toString());
 // Output: ToString: Intercalary Day, 2023 00:30:00 GMT+0100 (Central European Standard Time)
 
 console.log('ToUTCString:', date.toUTCString());
-// Output: ToUTCString: Tridecember 28, 2023 23:30:00 GMT
+// Output: ToUTCString: Undecember 28, 2023 23:30:00 GMT
 ```
 
 ## Note
