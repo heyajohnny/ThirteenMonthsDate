@@ -1,11 +1,11 @@
 {
-  "name": "thirteenmonthsdate",
+  "name": "thirteen-months-date",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "node test.js"
   },
-  "author": "",
+  "author": "heyajohnny",
   "license": "ISC",
-  "description": ""
+  "description": "Converts the JavaScript Date() to a 13 month date, based on the International Fixed Calendar https://en.wikipedia.org/wiki/International_Fixed_Calendar"
 }

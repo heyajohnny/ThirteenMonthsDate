@@ -28,6 +28,7 @@ dates.forEach(date => {
 	console.log('ToString:', date.toString());
 	console.log('ToUTCString:', date.toUTCString());
 	console.log(date.getTimezoneOffset());
+	console.log(ThirteenMonthsDate.UTC(2024, 11, 8, 0, 0, 0, 0));
 	// console.log('Is Intercalary:', date.isIntercalaryDay());
 	// console.log('Is UTCIntercalary:', date.isUTCIntercalaryDay());
 	console.log('---');
