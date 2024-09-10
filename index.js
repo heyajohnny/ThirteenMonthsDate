@@ -8,7 +8,6 @@ class ThirteenMonthsDate {
 	  if (args.length === 0) {
 		this._date = new Date();
 	  } else if (args.length === 1) {
-		console.log('args[0]', args[0]);
 		this._date = new Date(args[0]);
 	  } else {
 		const [year, month, day, hour = 0, minute = 0, second = 0, ms = 0] = args;
