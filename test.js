@@ -25,10 +25,10 @@ dates.forEach(date => {
 	console.log('UTC Date:', date.getUTCDate());
 	console.log('Local Month:', date.getMonth(), date.getMonthName());
 	console.log('UTC Month:', date.getUTCMonth(), date.monthNames[date.getUTCMonth()]);
-	// console.log('Is Intercalary:', date.isIntercalaryDay());
-	// console.log('Is UTCIntercalary:', date.isUTCIntercalaryDay());
 	console.log('ToString:', date.toString());
 	console.log('ToUTCString:', date.toUTCString());
 	console.log(date.getTimezoneOffset());
+	// console.log('Is Intercalary:', date.isIntercalaryDay());
+	// console.log('Is UTCIntercalary:', date.isUTCIntercalaryDay());
 	console.log('---');
 });

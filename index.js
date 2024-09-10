@@ -49,6 +49,12 @@ class ThirteenMonthsDate {
 	  return new Date(this._date.getTime() /* + (this._date.getTimezoneOffset() * 60000)*/);
 	}
 
+	_getDayOfYear(date) {
+		const start = new Date(date.getFullYear(), 0, 0);
+		const diff = date - start;
+		return Math.floor(diff / (1000 * 60 * 60 * 24));
+	}
+
 	getGregorianDateString() {
 		return this._date.toString();
 	}
@@ -253,12 +259,6 @@ class ThirteenMonthsDate {
   
 	valueOf() {
 	  return this._date.valueOf();
-	}
-  
-	_getDayOfYear(date) {
-	  const start = new Date(date.getFullYear(), 0, 0);
-	  const diff = date - start;
-	  return Math.floor(diff / (1000 * 60 * 60 * 24));
 	}
   
 	// Static methods
