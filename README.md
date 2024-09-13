@@ -65,7 +65,6 @@ The class includes various methods for formatting the date:
 
 - `toDateString()`
 - `toISOString()`
-- `toJSON()`
 - `toLocaleDateString()`
 - `toLocaleString()`
 - `toLocaleTimeString()`

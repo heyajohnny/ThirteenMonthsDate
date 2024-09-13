@@ -32,7 +32,7 @@ class ThirteenMonthsDate {
 		  day = ((adjustedDay - 1) % 28) + 1;
 		} else if (isLeapYear && dayOfYear === leapDay) {
 		  month = 13;
-		  day = 1;
+		  day = 0; // 18 june = day 0, 31 dec = day 1
 		} else {
 		  month = Math.floor((dayOfYear - 1) / 28);
 		  day = ((dayOfYear - 1) % 28) + 1;
@@ -216,11 +216,8 @@ class ThirteenMonthsDate {
 	}
   
 	toISOString() {
-	  return this._getUTCDate().toISOString();
-	}
-  
-	toJSON() {
-	  return this._getUTCDate().toJSON();
+		const { year, month, day } = this._adjustForThirteenMonths(this._date);
+		return `${year}-${(month+1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}T${this._date.toISOString().substring(11, 24)}`;
 	}
   
 	toLocaleDateString() {
