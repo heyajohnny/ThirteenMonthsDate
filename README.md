@@ -85,11 +85,11 @@ import ThirteenMonthsDate from 'thirteen-months-date';
 
 let date = new ThirteenMonthsDate(2023, 5, 16);
 
-console.log('InputDate (getGregorianDateString)', date.getGregorianDateString());
-// Output: InputDate (getGregorianDateString) Fri Jun 16 2023 00:00:00 GMT+0200 (Central European Summer Time)
+console.log('Local Gregorian DateString:', date.getGregorianDateString());
+// Output: Local Gregorian DateString: Fri Jun 16 2023 00:00:00 GMT+0200 (Central European Summer Time)
 
-console.log('InputUTCDate (getGregorianUTCDateString)', date.getGregorianUTCDateString());
-// Output: InputUTCDate (getGregorianUTCDateString) Thu, 15 Jun 2023 22:00:00 GMT
+console.log('UTC Gregorian DateString:', date.getGregorianUTCDateString());
+// Output: UTC Gregorian DateString: Thu, 15 Jun 2023 22:00:00 GMT
 
 console.log('Local Date:', date.getDate());
 // Output: Local Date: 27
@@ -112,11 +112,11 @@ console.log('ToUTCString:', date.toUTCString());
 
 date = new ThirteenMonthsDate("2023-12-31:00:30");
 
-console.log('InputDate (getGregorianDateString)', date.getGregorianDateString());
-// Output: InputDate (getGregorianDateString) Sun Dec 31 2023 00:30:00 GMT+0100 (Central European Standard Time)
+console.log('Local Gregorian DateString:', date.getGregorianDateString());
+// Output: Local Gregorian DateString: Sun Dec 31 2023 00:30:00 GMT+0100 (Central European Standard Time)
 
-console.log('InputUTCDate (getGregorianUTCDateString)', date.getGregorianUTCDateString());
-// Output: InputUTCDate (getGregorianUTCDateString) Sat, 30 Dec 2023 23:30:00 GMT
+console.log('UTC Gregorian DateString:', date.getGregorianUTCDateString());
+// Output: UTC Gregorian DateString: Sat, 30 Dec 2023 23:30:00 GMT
 
 console.log('Local Date:', date.getDate());
 // Output: Local Date: 1
