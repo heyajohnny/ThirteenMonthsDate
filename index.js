@@ -212,7 +212,9 @@ class ThirteenMonthsDate {
   
 	toDateString() {
 	  const { year, month, day } = this._adjustForThirteenMonths(this._date);
-	  return `${this.monthNames[month]} ${day}, ${year}`;
+	  const gregorianDateString = this._date.toDateString();
+	  // [day name] [month name] [day of month] [year]
+	  return `${gregorianDateString.split(' ')[0]} ${this.monthNames[month].substring(0,3)} ${day} ${year}`;
 	}
   
 	toISOString() {
@@ -233,11 +235,7 @@ class ThirteenMonthsDate {
 	}
   
 	toString() {
-	  const { year, month, day } = this._adjustForThirteenMonths(this._date);
-	  if (month === 13) {
-		return `Intercalary Day, ${year} ${this._date.toTimeString()}`;
-	  }
-	  return `${this.monthNames[month]} ${day}, ${year} ${this._date.toTimeString()}`;
+		return `${this.toDateString()} ${this._date.toTimeString()}`;
 	}
   
 	toTimeString() {
@@ -248,10 +246,7 @@ class ThirteenMonthsDate {
 	  const utcDate = this._getUTCDate();
 	  const { year, month, day } = this._adjustForThirteenMonths(utcDate, true);
 	  const timeString = utcDate.toUTCString().split(' ').slice(4).join(' ');
-	  if (month === 13) {
-		return `Intercalary Day, ${year} ${timeString}`;
-	  }
-	  return `${this.monthNames[month]} ${day}, ${year} ${timeString}`;
+	  return `${utcDate.toUTCString().split(' ')[0]} ${day} ${this.monthNames[month].substring(0,3)} ${year} ${timeString}`;
 	}
   
 	valueOf() {
