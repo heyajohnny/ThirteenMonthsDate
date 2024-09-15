@@ -32,10 +32,10 @@ const date1 = new ThirteenMonthsDate();
 // From a timestamp
 const date2 = new ThirteenMonthsDate(1632145200000);
 
-// From a date(time) string
+// From a (12 months 'Gregorian') date(time) string 
 const date3 = new ThirteenMonthsDate("2023-12-31");
 
-// From year, month, day, hour, minute, second, millisecond
+// From (12 months 'Gregorian') year, month, day, hour, minute, second, millisecond
 const date4 = new ThirteenMonthsDate(2023, 5, 15, 12, 30, 0, 0);
 ```
 
@@ -58,6 +58,7 @@ Additionally, it provides some unique methods:
 
 - `getMonthName()`, `getUTCMonthName()`: Get the name of the month
 - `isIntercalaryDay()`, `isUTCIntercalaryDay()`: Check if the date is an Intercalary Day
+- `getGregorianDateString()`, `getGregorianUTCDateString()`: Get the DateString in the 12 months 'Gregorian' format
 
 ### Formatting Methods
 
