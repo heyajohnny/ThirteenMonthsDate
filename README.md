@@ -103,10 +103,10 @@ console.log('UTC Month:', date.getUTCMonth(), date.monthNames[date.getUTCMonth()
 // Output: UTC Month: 5 June
 
 console.log('ToString:', date.toString());
-// Output: ToString: June 27, 2023 00:00:00 GMT+0200 (Central European Summer Time)
+// Output: ToString: Fri Jun 27 2023 00:00:00 GMT+0200 (Central European Summer Time)
 
 console.log('ToUTCString:', date.toUTCString());
-// Output: ToUTCString: June 26, 2023 22:00:00 GMT
+// Output: ToUTCString: Thu, 26 Jun 2023 22:00:00 GMT
 
 
 date = new ThirteenMonthsDate("2023-12-31:00:30");
@@ -130,10 +130,10 @@ console.log('UTC Month:', date.getUTCMonth(), date.monthNames[date.getUTCMonth()
 // Output: UTC Month: 12 Undecember
 
 console.log('ToString:', date.toString());
-// Output: ToString: Intercalary Day, 2023 00:30:00 GMT+0100 (Central European Standard Time)
+// Output: ToString: Sun Int 1 2023 00:30:00 GMT+0100 (Central European Standard Time)
 
 console.log('ToUTCString:', date.toUTCString());
-// Output: ToUTCString: Undecember 28, 2023 23:30:00 GMT
+// Output: ToUTCString: Sat, 28 Und 2023 23:30:00 GMT
 ```
 
 ## Note
