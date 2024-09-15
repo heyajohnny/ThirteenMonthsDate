@@ -75,8 +75,6 @@ The class includes various methods for formatting the date:
 ### Static Methods
 
 - `ThirteenMonthsDate.now()`: Returns the current timestamp
-- `ThirteenMonthsDate.parse(dateString)`: Parses a date string and returns the timestamp
-- `ThirteenMonthsDate.UTC(year, month, date, hrs, min, sec, ms)`: Returns the timestamp for the given UTC date and time
 
 ## Examples
 

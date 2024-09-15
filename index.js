@@ -55,6 +55,31 @@ class ThirteenMonthsDate {
 		return Math.floor(diff / (1000 * 60 * 60 * 24));
 	}
 
+	_getSystemDateFormat() {
+		const date = new Date(2000, 0, 2); // January 2, 2000
+		const dateString = date.toLocaleDateString();
+	
+		// Check for common separators
+		let separator = '-';
+		if (dateString.includes('/')) separator = '/';
+		else if (dateString.includes('.')) separator = '.';
+	
+		const parts = dateString.split(separator);
+	
+		// Determine the order of day, month, and year
+		let format = '';
+		for (const part of parts) {
+			if (part.length === 4) format += 'yyyy';
+			else if (part === '2') format += 'dd';
+			else if (part === '1') format += 'mm';
+			else format += part;
+			format += separator;
+		}
+	
+		// Remove the trailing separator
+		return format.slice(0, -1);
+	}
+
 	getGregorianDateString() {
 		return this._date.toString();
 	}
@@ -223,11 +248,17 @@ class ThirteenMonthsDate {
 	}
   
 	toLocaleDateString() {
-	  return this.toDateString();
+		const dateFormat = this._getSystemDateFormat();
+		const { year, month, day } = this._adjustForThirteenMonths(this._date);
+		// Replace the format placeholders with actual values
+		return dateFormat
+			.replace('yyyy', year)
+			.replace('mm', (month+1).toString().padStart(2, '0'))
+			.replace('dd', day.toString().padStart(2, '0'));
 	}
   
 	toLocaleString() {
-	  return `${this.toDateString()} ${this._date.toLocaleTimeString()}`;
+	  return `${this.toLocaleDateString()}, ${this._date.toLocaleTimeString()}`;
 	}
   
 	toLocaleTimeString() {
@@ -256,14 +287,6 @@ class ThirteenMonthsDate {
 	// Static methods
 	static now() {
 	  return Date.now();
-	}
-  
-	static parse(dateString) {
-	  return Date.parse(dateString);
-	}
-  
-	static UTC(year, month, date, hrs, min, sec, ms) {
-	  return Date.UTC(year, month, date, hrs, min, sec, ms);
 	}
   }
   
